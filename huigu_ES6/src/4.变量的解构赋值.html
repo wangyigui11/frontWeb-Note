@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // ES6 允许按照一定模式, 从数组和对象中提取值, 对变量进行赋值, 这样被称为解构
+
+    // before
+    let a = 1
+    let b = 2
+    let c = 3
+
+    // after
+
+    let [ a, b, c] = [ 1, 2, 3]  // 按照对应位置 对变量赋值
+
+    // 可以设置默认值 
+    let [foo = true] = []   
+    foo // true
+
+    let [x, y = 'b'] = ['a']  // x = 'a' y = 'b'
+
+    // ES6 内部使用严格相等运算符 === ， 判断一个位置是否有值。 所以， 只有当一个数组成员严格等于 undefined, 默认值才会生效
+
+    let [ x= 1 ] =  [undefined]  // x = 1
+
+    let [ x = 1 ] = [ null ]   // x = null , 数组成员是null 默认值就不会生效， 因为null不严格等于 undefined
+
+
+    // 对象的结构赋值
+    // 对象的结构与数组 有一个重要的不同. 数组的元素是按次序排列的, 变量的取值由它的位置决定; 
+    // 而对象的属性没有次序， 变量必须与属性同名, 才能取到正确的值
+    // 如果结构失败 变量的值 等于 undefined
+
+
+    let {foo, bar,baz} = { foo: 'aaa', bar :'bbb'}
+    foo   // 'aaa'
+    bar   // 'bbb'
+    baz   // undefined
+  </script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 转码前
+    input.map(item => item + 1)
+    // 转码后
+    input.map( function (item) {
+      return item + 1
+    })
+    // 1. 在项目目录中安装babel  npm install --save-dev @babel/core
+    /* 
+       2. 配置文件 babelrc
+
+          2.1 使用babel的第一步就是配置 .babelrc 文件, 用来设置转码规则和插件, 基本格式如下 --> .babelrc
+
+          2.2 babel提供命令行工具@babel/cli ， 用于命令行转码
+          安装命令  npm install --save-dev @babel/cli
+
+          转码结果输出到标准输出   npx babel example.js
+
+          转码结果写入一个文件
+          npx babel example.js --out-file compiled.js 
+          或者
+          npx babel example.js -o compiled.js 
+
+
+          整个目录转码
+          npx babel src --out-dir lib  // 把src下的文件转换到lib下面
+          或者
+          npm babel src -d lib 
+
+          2.3 babel-node 命令 
+            2.3.1 先安装这个模块  npm install --save-dev @babel/node
+
+            2.3.2 输入npx babel-node 进入到 REPL 环境
+
+          2.4 @babel/register模块   --> register_use.js
+
+          2.5 polyfill Babel默认值转换新的 javascript语法,而不转换新的API, 比如
+            Iterator / Generator / Set / Map / Proxy / Reflect / Symbol / Promise 等全局对象
+            以及一些定义在全局对象上的方法(  比如 Object.assign ) 都不会转码
+
+            eg: ES6 在array对象上新增了 Array.from 方法. Babel 就不会转码这个方法
+            如果想让这个方法运行， 可以使用 core-js 和 regenerator-runtime，为当前环境提供一个垫片
+
+          */
+  </script>
+</body>
+</html>

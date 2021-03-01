@@ -1,0 +1,17 @@
+{
+  "name": "huigu_ES6",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "@babel/core": "^7.13.8"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.13.0",
+    "@babel/node": "^7.13.0",
+    "@babel/preset-env": "^7.13.8",
+    "@babel/register": "^7.13.8",
+    "core-js": "^3.9.1",
+    "regenerator-runtime": "^0.13.7"
+  }
+}
